@@ -1,26 +1,18 @@
 {
+  "files": [],
+  "include": ["src/shared/**/*"],
   "compilerOptions": {
-    "target": "ES6",
-    "allowJs": true,
-    "lib": ["dom", "dom.iterable", "esnext", "es6"],
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
     "strictNullChecks": true,
-    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "strictBindCallApply": false,
+    "noImplicitOverride": true,
+    "useDefineForClassFields": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "baseUrl": ".",
     "paths": {
-      "@providers/*": ["src/providers/*"],
-      "@styles/*": ["src/styles/*"]
+      "@shared/*": ["src/shared/*"]
     }
   },
-  "include": ["src/**/*"]
+  "references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.web.json" }]
 }
