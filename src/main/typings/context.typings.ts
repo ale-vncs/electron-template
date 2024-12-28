@@ -1,29 +1,27 @@
-import { Undefined } from '@main/typings/generic.typing'
-import { CookieJar } from 'tough-cookie'
+import { Undefined } from '@main/typings/generic.typing';
 
-const context = ['ipc'] as const
+const context = ['ipc'] as const;
 
-export type AppContextType = (typeof context)[number]
+export type AppContextType = (typeof context)[number];
 
 export interface ContextKeys {
   logger: {
-    transactionId: string
-    context: AppContextType
-    channel: string
-  }
-  cookieJar: CookieJar
+    transactionId: string;
+    context: AppContextType;
+    channel: string;
+  };
   user: {
-    accountId: number
-    ikariamToken: string
-    blackbox: string
-  }
+    accountId: number;
+    ikariamToken: string;
+    blackbox: string;
+  };
   ikariamServer: {
-    accountId: number
-    language: string
-    number: number
-  }
+    accountId: number;
+    language: string;
+    number: number;
+  };
   ikariamWorld: {
-    cookie: string
-    actionRequest: Undefined<string>
-  }
+    cookie: string;
+    actionRequest: Undefined<string>;
+  };
 }

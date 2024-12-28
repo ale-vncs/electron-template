@@ -6,7 +6,23 @@ import {
   externalizeDepsPlugin,
   swcPlugin,
 } from 'electron-vite';
+import { Plugin } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+
+const sql = (): Plugin => {
+  return {
+    name: 'sql',
+    transform(code, id) {
+      if (/[.]sql/i.test(id)) {
+        return `export default ${JSON.stringify(code)}`;
+      }
+      return {
+        code,
+        map: null,
+      };
+    },
+  };
+};
 
 export default defineConfig({
   main: {
@@ -16,6 +32,7 @@ export default defineConfig({
       },
     },
     plugins: [
+      sql(),
       tsconfigPaths({
         configNames: ['tsconfig.node.json'],
       }),
