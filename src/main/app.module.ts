@@ -7,8 +7,11 @@ import { typeormModuleConfig } from '@main/config/typeorm-module.config';
 import { BrowserWindowRegisterModule } from '@main/integrations/browser-window-register/browser-window-register.module';
 import { ContextModule } from '@main/integrations/context/context.module';
 import { LoggerModule } from '@main/integrations/logger/logger.module';
-import { ServerModule } from '@main/modules/server/server.module';
 import { Module } from '@nestjs/common';
+
+// Modules
+
+import { ServerModule } from '@main/modules/server/server.module';
 
 @Module({
   providers: [...providerConfig, AppService],

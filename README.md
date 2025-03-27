@@ -1,4 +1,4 @@
-# electroon-template
+# electron-template
 
 An Electron application with React, NestJS and TypeScript
 

@@ -3,8 +3,7 @@
   "include": [
     "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
-    "src/renderer/ikariamWorld/src/**/*",
-    "src/shared/**/*",
+    "src/shared/**/*"
   ],
   "compilerOptions": {
     "composite": true,
