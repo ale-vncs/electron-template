@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - esbuild
+  - '@biomejs/biome'
+  - '@nestjs/core'
+  - '@swc/core'
+  - better-sqlite3
+  - electron
